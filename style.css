@@ -15,6 +15,29 @@ body {
   user-select: none;
 }
 
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 10px;
+  margin-right: -10px; /* compensa el letter-spacing final para centrar */
+  line-height: 1;
+}
+
+.title span:nth-child(1) { color: #e57373; }
+.title span:nth-child(2) { color: #ff9e64; }
+.title span:nth-child(3) { color: #e0af68; }
+.title span:nth-child(4) { color: #9ece6a; }
+.title span:nth-child(5) { color: #7aa2f7; }
+.title span:nth-child(6) { color: #bb9af7; }
+
 .wrapper {
   position: relative;
 }
