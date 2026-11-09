@@ -266,6 +266,7 @@ function togglePause() {
 }
 
 function loop(ts) {
+  if (gameOver) return;
   const dt = ts - lastTime;
   lastTime = ts;
   dropAccum += dt;
@@ -278,6 +279,8 @@ function loop(ts) {
     }
   }
   draw();
+  // Si lockPiece() terminó el juego, no reprogramar el bucle
+  if (gameOver) return;
   animId = requestAnimationFrame(loop);
 }
 
